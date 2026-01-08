@@ -12,7 +12,7 @@ provider "aws" {
 
 # module for creating a website using an s3 bucket
 module "website-s3-bucket" {
-  source  = "app.terraform.io/alditohachicorp/s3-static-website/aws"
+  source  = "app.terraform.io/alditohachicorp/website-s3-bucket/aws"
   version = "1.0.0"
   config = {
     bucket_name    = var.aws_bucket_name
@@ -24,5 +24,6 @@ module "website-s3-bucket" {
     }
   }
 }
+
 
 
